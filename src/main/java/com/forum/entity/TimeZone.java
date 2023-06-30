@@ -18,6 +18,10 @@ public class TimeZone {
     public TimeZone() {
     }
 
+    public TimeZone(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }
@@ -39,7 +43,7 @@ public class TimeZone {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TimeZone timeZone = (TimeZone) o;
-        return id.equals(timeZone.id) && name.equals(timeZone.name);
+        return name.equals(timeZone.name);
     }
 
     @Override
